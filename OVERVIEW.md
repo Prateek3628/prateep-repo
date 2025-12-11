@@ -283,7 +283,7 @@ Accent Colors:
 
 📞 Phone:     +91 98765 43210
 💬 WhatsApp:  +91 98765 43210
-📧 Email:     info@finlegaladvisors.com
+📧 Email:     pkguptanassociates@gmail.com
 📍 Address:   123 Business Tower, MG Road
               Bangalore - 560001, Karnataka, India
 

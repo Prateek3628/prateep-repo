@@ -17,12 +17,12 @@ const BUSINESS_CONFIG = {
   // Contact Information
   phone: {
     display: "+91 98765 43210",
-    link: "+919876543210",        // For tel: links (no spaces or hyphens)
-    whatsapp: "919876543210"       // For WhatsApp (no + symbol)
+    link: "+919555489525",        // For tel: links (no spaces or hyphens)
+    whatsapp: "919555489525"       // For WhatsApp (no + symbol)
   },
   
   email: {
-    primary: "info@finlegaladvisors.com",
+    primary: "pkguptanassociates@gmail.com",
     support: "support@finlegaladvisors.com"
   },
   
@@ -234,15 +234,15 @@ STEP-BY-STEP REPLACEMENT GUIDE:
    Replace: Your Phone (with country code)
 
 3. PHONE NUMBER (Link Format)
-   Find: "+919876543210"
+   Find: "+919555489525"
    Replace: Your Phone (no spaces/hyphens)
 
 4. WHATSAPP NUMBER
-   Find: "919876543210"
+   Find: "919555489525"
    Replace: Your WhatsApp (no + symbol)
 
 5. EMAIL ADDRESS
-   Find: "info@finlegaladvisors.com"
+   Find: "pkguptanassociates@gmail.com"
    Replace: Your Email
 
 6. OFFICE ADDRESS

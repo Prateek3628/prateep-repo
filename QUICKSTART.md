@@ -51,8 +51,8 @@ const GOOGLE_SHEETS_CONFIG = {
 ### Update Contact Info (Find & Replace in ALL HTML files)
 ```
 +91 98765 43210        → Your phone
-919876543210           → Your WhatsApp (no +)
-info@finlegaladvisors.com → Your email
+919555489525           → Your WhatsApp (no +)
+pkguptanassociates@gmail.com → Your email
 FinLegal Advisors      → Your company name
 ```
 
@@ -113,13 +113,13 @@ Update these in **ALL 4 HTML files** (index, services, appointment, contact):
 
 ```html
 <!-- Phone (2 formats needed) -->
-<a href="tel:+919876543210">+91 98765 43210</a>
+<a href="tel:+919555489525">+91 98765 43210</a>
 
 <!-- WhatsApp (no + in URL) -->
-<a href="https://wa.me/919876543210">WhatsApp Us</a>
+<a href="https://wa.me/919555489525">WhatsApp Us</a>
 
 <!-- Email -->
-<a href="mailto:info@finlegaladvisors.com">Email</a>
+<a href="mailto:pkguptanassociates@gmail.com">Email</a>
 
 <!-- Company Name -->
 <span>FinLegal Advisors</span>

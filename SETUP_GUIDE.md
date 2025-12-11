@@ -112,8 +112,8 @@ Replace placeholder information in all HTML files:
 
 **Find and replace:**
 - `+91 98765 43210` → Your actual phone number
-- `919876543210` → Your WhatsApp number (without +)
-- `info@finlegaladvisors.com` → Your email
+- `919555489525` → Your WhatsApp number (without +)
+- `pkguptanassociates@gmail.com` → Your email
 - `FinLegal Advisors` → Your company name
 
 ### Step 5: Test the Website
