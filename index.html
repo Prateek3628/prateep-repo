@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Financial Advisor | GST, ITR & Tax Consultation Services</title>
+    <meta name="description" content="Expert GST Registration, ITR Filing, Tax Consultation, and Compliance Management services in India.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-gray-50">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-900">
+                    <i class="fas fa-balance-scale mr-2"></i>
+                    <span>FinLegal Advisors</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-blue-900 hover:text-blue-600 transition">Home</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="appointment.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Book Appointment</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-blue-900 hover:text-blue-600">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="appointment.html" class="block py-2 text-gray-700 hover:text-blue-600">Book Appointment</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20 bg-gradient-to-br from-blue-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6 fade-in">
+                    Expert Financial & Tax Advisory Services
+                </h1>
+                <p class="text-xl text-gray-700 mb-8 fade-in-delay">
+                    Professional GST Registration, ITR Filing, Tax Consultation, and Compliance Management for individuals and businesses across India.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-delay-2">
+                    <a href="appointment.html" class="btn-primary bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
+                        Book Consultation
+                    </a>
+                    <a href="services.html" class="btn-secondary bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-gray-50 transition shadow-lg border border-blue-900">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive financial and legal advisory services tailored to your needs</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">GST Registration & Filing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Complete GST registration, monthly/quarterly return filing, and compliance management for your business.
+                    </p>
+                    <a href="services.html#gst" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">ITR Filing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Expert income tax return filing services for individuals, professionals, and businesses with maximum tax savings.
+                    </p>
+                    <a href="services.html#itr" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Tax Consultancy</h3>
+                    <p class="text-gray-600 mb-4">
+                        Strategic tax planning, advisory services, and consultation to optimize your tax liabilities legally.
+                    </p>
+                    <a href="services.html#tax-consultation" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Business Registration</h3>
+                    <p class="text-gray-600 mb-4">
+                        Company incorporation, partnership registration, LLP formation, and all business licensing services.
+                    </p>
+                    <a href="services.html#business-registration" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Compliance Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        End-to-end compliance management, statutory filings, and regulatory adherence for businesses.
+                    </p>
+                    <a href="services.html#compliance" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Financial Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive financial planning, investment advisory, and wealth management solutions.
+                    </p>
+                    <a href="services.html#financial-planning" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
+                <p class="text-blue-200 max-w-2xl mx-auto">Professional expertise you can trust</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Expert Advisors</h3>
+                    <p class="text-blue-200">Certified professionals with years of experience</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">100% Compliance</h3>
+                    <p class="text-blue-200">Full adherence to legal and regulatory requirements</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Timely Service</h3>
+                    <p class="text-blue-200">Quick turnaround and deadline-driven approach</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+                    <p class="text-blue-200">Always available to assist you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                Book a consultation today and let our experts handle your financial and legal requirements.
+            </p>
+            <a href="appointment.html" class="inline-block bg-blue-900 text-white px-10 py-4 rounded-lg hover:bg-blue-800 transition shadow-lg text-lg font-semibold">
+                Book Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">FinLegal Advisors</h3>
+                    <p class="text-gray-400">Professional financial and legal advisory services across India.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="appointment.html" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#gst" class="text-gray-400 hover:text-white transition">GST Registration</a></li>
+                        <li><a href="services.html#itr" class="text-gray-400 hover:text-white transition">ITR Filing</a></li>
+                        <li><a href="services.html#tax-consultation" class="text-gray-400 hover:text-white transition">Tax Consultancy</a></li>
+                        <li><a href="services.html#compliance" class="text-gray-400 hover:text-white transition">Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <a href="tel:+919876543210" class="text-gray-400 hover:text-white transition">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-green-400"></i>
+                            <a href="https://wa.me/919876543210" target="_blank" class="text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <a href="mailto:info@finlegaladvisors.com" class="text-gray-400 hover:text-white transition">info@finlegaladvisors.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p class="mb-2">© 2025 FinLegal Advisors. All rights reserved.</p>
+                <p class="text-sm">
+                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
