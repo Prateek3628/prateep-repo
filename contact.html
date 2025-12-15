@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="font-sans bg-gray-50">
-    
+
     <!-- Header -->
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
         <nav class="container mx-auto px-6 py-4">
@@ -19,13 +21,14 @@
                     <i class="fas fa-balance-scale mr-2"></i>
                     <span>FinLegal Advisors</span>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition">About</a>
                     <a href="services.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Services</a>
-                    <a href="appointment.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Book Appointment</a>
-                    <a href="contact.html" class="nav-link text-blue-900 hover:text-blue-600 transition">Contact</a>
+                    <a href="faq.html" class="nav-link text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                    <a href="contact.html" class="nav-link text-blue-600 font-semibold">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -37,9 +40,10 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
-                <a href="appointment.html" class="block py-2 text-gray-700 hover:text-blue-600">Book Appointment</a>
-                <a href="contact.html" class="block py-2 text-blue-900 hover:text-blue-600">Contact</a>
+                <a href="faq.html" class="block py-2 text-gray-700 hover:text-blue-600">FAQ</a>
+                <a href="contact.html" class="block py-2 text-blue-600 font-semibold">Contact</a>
             </div>
         </nav>
     </header>
@@ -56,39 +60,50 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12">
-                
+
                 <!-- Contact Form -->
-                <div>
+                <div class="scroll-fade-left">
                     <div class="bg-white rounded-xl shadow-lg p-8">
                         <h2 class="text-3xl font-bold text-blue-900 mb-6">Send us a Message</h2>
-                        
+
                         <form id="contactForm" class="space-y-6">
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
-                                <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name">
+                                <input type="text" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Enter your name">
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
-                                <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="your.email@example.com">
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
-                                <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="10-digit mobile number">
+                                <input type="tel" name="phone" required pattern="[0-9]{10}"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="10-digit mobile number">
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Subject</label>
-                                <input type="text" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="What is this regarding?">
+                                <input type="text" name="subject"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="What is this regarding?">
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Message *</label>
-                                <textarea name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us more about your inquiry..."></textarea>
+                                <textarea name="message" required rows="5"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Tell us more about your inquiry..."></textarea>
                             </div>
 
-                            <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-lg hover:bg-blue-800 transition font-semibold text-lg shadow-lg">
+                            <button type="submit"
+                                class="w-full bg-blue-900 text-white py-4 rounded-lg hover:bg-blue-800 transition font-semibold text-lg shadow-lg">
                                 <span class="submit-text">Send Message</span>
                                 <span class="loading-text hidden">
                                     <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
@@ -101,11 +116,12 @@
                 </div>
 
                 <!-- Contact Information -->
-                <div>
+                <div class="scroll-fade-right">
                     <div class="mb-8">
                         <h2 class="text-3xl font-bold text-blue-900 mb-6">Get in Touch</h2>
                         <p class="text-gray-600 mb-8">
-                            Whether you have questions about our services, need professional advice, or want to schedule a consultation, our team is ready to assist you.
+                            Whether you have questions about our services, need professional advice, or want to schedule
+                            a consultation, our team is ready to assist you.
                         </p>
                     </div>
 
@@ -117,7 +133,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-blue-900 mb-2">Phone</h3>
-                                <p class="text-gray-700">+91 98765 43210</p>
+                                <p class="text-gray-700">+91 96693 36755</p>
                                 <p class="text-gray-600 text-sm mt-1">Mon-Sat, 10:00 AM - 6:00 PM</p>
                             </div>
                         </div>
@@ -128,8 +144,9 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-blue-900 mb-2">WhatsApp</h3>
-                                <p class="text-gray-700">+91 98765 43210</p>
-                                <a href="https://wa.me/919555489525" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-semibold mt-1 inline-block">
+                                <p class="text-gray-700">+91 96693 36755</p>
+                                <a href="https://wa.me/919555489525" target="_blank"
+                                    class="text-blue-600 hover:text-blue-800 text-sm font-semibold mt-1 inline-block">
                                     Chat Now <i class="fas fa-arrow-right ml-1"></i>
                                 </a>
                             </div>
@@ -141,7 +158,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-blue-900 mb-2">Email</h3>
-                                <p class="text-gray-700">pkguptanassociates@gmail.com</p>
+                                <p class="text-gray-700">taxbrothers.co@gmail.com,</p>
                                 <p class="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
                             </div>
                         </div>
@@ -182,51 +199,22 @@
         </div>
     </section>
 
-    <!-- Map Section (Optional - You can replace with actual Google Maps embed) -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="bg-gray-300 rounded-xl h-96 flex items-center justify-center">
-                <div class="text-center text-gray-600">
-                    <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
-                    <p class="text-lg">Map Location</p>
-                    <p class="text-sm">Replace this section with Google Maps embed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">FinLegal Advisors</h3>
-                    <p class="text-gray-400">Professional financial and legal advisory services across India.</p>
+                    <h3 class="text-xl font-bold mb-4 company-name">Tax Brothers</h3>
+                    <p class="text-gray-400 company-tagline">Simplifying Tax, Empowering Business</p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
                         <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="appointment.html" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="services.html#pf" class="text-gray-400 hover:text-white transition">PF Registration</a></li>
-                        <li><a href="services.html#iec" class="text-gray-400 hover:text-white transition">IEC Registration</a></li>
-                        <li><a href="services.html#udyam" class="text-gray-400 hover:text-white transition">Udyam Registration</a></li>
-                        <li><a href="services.html#esic" class="text-gray-400 hover:text-white transition">ESIC Registration</a></li>
-                        <li><a href="services.html#gst" class="text-gray-400 hover:text-white transition">GST Registration</a></li>
-                        <li><a href="services.html#trademark" class="text-gray-400 hover:text-white transition">Trademark</a></li>
-                        <li><a href="services.html#company" class="text-gray-400 hover:text-white transition">Company Registration</a></li>
-                        <li><a href="services.html#tax-audit" class="text-gray-400 hover:text-white transition">Tax Audit</a></li>
-                        <li><a href="services.html#gst-return" class="text-gray-400 hover:text-white transition">GST Return</a></li>
-                        <li><a href="services.html#itr" class="text-gray-400 hover:text-white transition">ITR</a></li>
                     </ul>
                 </div>
 
@@ -235,35 +223,50 @@
                     <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-blue-400"></i>
-                            <a href="tel:+919555489525" class="text-gray-400 hover:text-white transition">+91 98765 43210</a>
+                            <a href="tel:+919669336755"
+                                class="phone-link text-gray-400 hover:text-white transition"><span
+                                    class="phone-display">+91 96693 36755</span></a>
                         </li>
                         <li class="flex items-center">
                             <i class="fab fa-whatsapp mr-3 text-green-400"></i>
-                            <a href="https://wa.me/919555489525" target="_blank" class="text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                            <a href="https://wa.me/919669336755" target="_blank"
+                                class="whatsapp-link text-gray-400 hover:text-white transition">WhatsApp Us</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-blue-400"></i>
-                            <a href="mailto:pkguptanassociates@gmail.com" class="text-gray-400 hover:text-white transition">pkguptanassociates@gmail.com</a>
+                            <a href="mailto:taxbrothers.co@gmail.com"
+                                class="email-link text-gray-400 hover:text-white transition">taxbrothers.co@gmail.com</a>
                         </li>
                     </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="address-full text-gray-400">H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA,
+                        NEW DELHI 110092</p>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p class="mb-2">© 2025 FinLegal Advisors. All rights reserved.</p>
+                <p class="mb-2">© 2025 <span class="company-name">Tax Brothers</span>. All rights reserved.</p>
                 <p class="text-sm">
-                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
+                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult
+                    with our advisors for specific tax and legal matters.
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919555489525" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-float whatsapp-link" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script src="js/animations.js"></script>
+
 
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>
 </body>
+
 </html>

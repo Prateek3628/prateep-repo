@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Certification | Tax Brothers</title>
+    <meta name="description" content="Complete ISO certification support for ISO 9001, 14001, 45001, 27001, and other management system standards.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/config.js"></script>
+    <script src="js/data-loader.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-900">
+                    <i class="fas fa-balance-scale mr-2"></i>
+                    <span class="company-name">Tax Brothers</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">HOME</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">ABOUT</a>
+                    <a href="services.html" class="text-blue-600 font-semibold">SERVICES</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">CONTACT</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="hidden md:hidden mt-4 space-y-2" id="mobile-menu">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition py-2">HOME</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 transition py-2">ABOUT</a>
+                <a href="services.html" class="block text-blue-600 font-semibold py-2">SERVICES</a>
+                <a href="faq.html" class="block text-gray-700 hover:text-blue-600 transition py-2">FAQ</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 transition py-2">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <img src="images/11.png" alt="ISO Certification" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/70"></div>
+            <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+                <div class="text-6xl mb-4">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">ISO Certification</h1>
+                <p class="text-xl">Complete ISO certification support for ISO 9001, 14001, 45001, 27001, and other management system standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-chart-line mr-3 text-blue-600"></i>
+                        ISO Consultation & Gap Analysis
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Understanding business requirements</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Identifying gaps in current processes</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Mapping the right ISO standard for your industry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-file-alt mr-3 text-blue-600"></i>
+                        ISO Documentation Preparation
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Creating manuals, policies & procedures</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Preparing SOPs and required forms</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Drafting Quality, Environmental & Safety documents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-cogs mr-3 text-blue-600"></i>
+                        ISO Implementation Support
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Implementing quality and management systems</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Staff training & awareness sessions</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Assistance with process development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-search mr-3 text-blue-600"></i>
+                        Internal Audit (First-Party Audit)
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Conducting internal audits as per ISO standards</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Preparing audit reports & corrective actions</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Ensuring readiness for certification audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-award mr-3 text-blue-600"></i>
+                        ISO Certification Assistance
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 9001 (Quality Management)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 14001 (Environment Management)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 45001 (Occupational Health & Safety)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 22000 / HACCP (Food Safety)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 27001 (Information Security)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 20000 (IT Service Management)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 13485 (Medical Devices)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">ISO 50001 (Energy Management)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-check-square mr-3 text-blue-600"></i>
+                        Certification Body Selection
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Choosing the right accredited certification body</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Comparing pricing & audit requirements</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Ensuring international recognition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-eye mr-3 text-blue-600"></i>
+                        Surveillance Audit Support
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Annual surveillance audits</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Reviewing compliance and improvements</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Ensuring continuous certification validity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-redo mr-3 text-blue-600"></i>
+                        Renewal of ISO Certification
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Renewal of expiring certificates</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Updating documentation & procedures</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Conducting pre-renewal internal audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-wrench mr-3 text-blue-600"></i>
+                        Corrective Action & NCR Closure
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Helping close Non-Conformance Reports</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Preparing CAPA documentation</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Ensuring full compliance for re-audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap mr-3 text-blue-600"></i>
+                        ISO Training & Awareness Programs
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Staff training on specific ISO standards</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Process & compliance awareness</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Maintaining long-term ISO culture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-project-diagram mr-3 text-blue-600"></i>
+                        Integrated Management Systems (IMS)
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Combining ISO 9001 + 14001 + 45001</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Unified documentation</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Efficient multi-standard management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-level-up-alt mr-3 text-blue-600"></i>
+                        ISO Upgrade & Transition Support
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Upgrading to latest versions of ISO</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Migrating from old standards to new</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Need ISO Certification?</h2>
+            <p class="text-xl mb-8 opacity-90">Let our experts handle all your compliance needs</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i>Book Appointment
+                </a>
+                <a href="services.html" class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition shadow-lg">
+                    <i class="fas fa-arrow-left mr-2"></i>All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+            <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 company-name">Tax Brothers</h3>
+                    <p class="text-gray-400 company-tagline">Simplifying Tax, Empowering Business</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <a href="tel:+919669336755" class="phone-link text-gray-400 hover:text-white transition"><span class="phone-display">+91 96693 36755</span></a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-green-400"></i>
+                            <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-link text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <a href="mailto:taxbrothers.co@gmail.com" class="email-link text-gray-400 hover:text-white transition">taxbrothers.co@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="address-full text-gray-400">H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA, NEW DELHI 110092</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p class="mb-2">© 2025 <span class="company-name">Tax Brothers</span>. All rights reserved.</p>
+                <p class="text-sm">
+                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-float whatsapp-link" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<script src="js/animations.js"></script>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

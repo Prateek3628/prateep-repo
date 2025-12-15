@@ -1,401 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Legal Financial Advisor</title>
-    <meta name="description" content="Complete range of GST, ITR, Tax Consultation, and Financial Advisory Services.">
+    <title>Our Services | Tax Brothers</title>
+    <meta name="description" content="Complete Tax & Compliance Services">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/config.js"></script>
+    <script src="js/data-loader.js"></script>
 </head>
+
 <body class="font-sans bg-gray-50">
-    
-    <!-- Header -->
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold text-blue-900">
                     <i class="fas fa-balance-scale mr-2"></i>
-                    <span>FinLegal Advisors</span>
+                    <span class="company-name">Tax Brothers</span>
                 </div>
-                
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="services.html" class="nav-link text-blue-900 hover:text-blue-600 transition">Services</a>
-                    <a href="appointment.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Book Appointment</a>
-                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">HOME</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">ABOUT</a>
+                    <a href="services.html" class="text-blue-600 font-semibold">SERVICES</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">CONTACT</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-                <a href="services.html" class="block py-2 text-blue-900 hover:text-blue-600">Services</a>
-                <a href="appointment.html" class="block py-2 text-gray-700 hover:text-blue-600">Book Appointment</a>
-                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            <div class="hidden md:hidden mt-4 space-y-2" id="mobile-menu">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition py-2">HOME</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 transition py-2">ABOUT</a>
+                <a href="services.html" class="block text-blue-600 font-semibold py-2">SERVICES</a>
+                <a href="faq.html" class="block text-gray-700 hover:text-blue-600 transition py-2">FAQ</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 transition py-2">CONTACT</a>
             </div>
         </nav>
     </header>
-
-    <!-- Page Header -->
-    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Our Services</h1>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Comprehensive financial and legal solutions tailored to your business needs</p>
+    </div>
+    </nav>
+    </header>
+    <section class="relative pt-20">
+        <div class="relative h-[500px] flex items-center justify-center overflow-hidden">
+            <img src="images/10.png" alt="Services"
+                class="absolute inset-0 w-full h-full object-contain bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/60"></div>
+            <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Tax & Compliance Services</h1>
+                <p class="text-xl md:text-2xl mb-6">Everything your business needs handled by experts.</p>
+                <a href="#services-grid"
+                    class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition shadow-lg">Explore
+                    Services</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Expert Tax & Compliance Services All Under
+                    One Roof</h2>
+                <p class="text-xl text-gray-600 italic mb-8">"Fast, Reliable & Fully Online Solutions for Your
+                    Business."</p>
+                <p class="text-lg text-gray-700 mb-8">From GST to Income Tax, Business Registration to Monthly
+                    Compliance our experts handle everything with accuracy, transparency, and timely delivery.</p>
+                <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-3 text-xl"></i>
+                        <span class="text-gray-700">End-to-End Online Service</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-3 text-xl"></i>
+                        <span class="text-gray-700">Expert CA/Tax Consultants</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-3 text-xl"></i>
+                        <span class="text-gray-700">Affordable & Transparent Pricing</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-3 text-xl"></i>
+                        <span class="text-gray-700">Quick Turnaround Time</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services-grid"
+                        class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg">Explore
+                        All Services</a>
+                    <a href="appointment.html"
+                        class="inline-block bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition shadow-lg">Get
+                        Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services-grid" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Complete Service Range</h2>
+                <p class="text-gray-600 text-lg">Professional solutions for all your tax and compliance needs</p>
+            </div>
+            <div id="services-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
     </section>
 
-    <!-- Services Detail -->
+    <!-- FAQs Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            
-            <!-- GST Registration & Filing -->
-            <div id="gst" class="service-detail mb-20 scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-file-invoice"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">GST Registration & Filing</h2>
-                        <p class="text-gray-600 mb-6">
-                            Comprehensive GST services including registration, return filing, and compliance management. We ensure your business stays compliant with all GST regulations.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>New GST Registration</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Monthly/Quarterly Return Filing (GSTR-1, GSTR-3B)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Annual Return Filing (GSTR-9)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>GST Compliance Advisory</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Input Tax Credit Management</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('GST Registration & Filing')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                    <div class="bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="GST Services" class="rounded-lg shadow-lg w-full">
-                    </div>
-                </div>
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Common questions about our company and services</p>
             </div>
 
-            <!-- ITR Filing -->
-            <div id="itr" class="service-detail mb-20 scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1 bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop" alt="ITR Filing" class="rounded-lg shadow-lg w-full">
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">ITR Filing Services</h2>
-                        <p class="text-gray-600 mb-6">
-                            Expert income tax return filing for individuals, professionals, and businesses. We ensure maximum tax savings within legal framework.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Individual ITR Filing (Salaried & Self-Employed)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Business ITR Filing</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Capital Gains Calculation & Filing</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Tax Planning & Optimization</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Revised Return Filing</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('ITR Filing')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                </div>
+            <div class="services-faq-container max-w-4xl mx-auto space-y-4 scroll-animate">
+                <!-- FAQs will be loaded dynamically from config.js -->
             </div>
-
-            <!-- Tax Consultancy -->
-            <div id="tax-consultation" class="service-detail mb-20 scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">Tax Consultancy</h2>
-                        <p class="text-gray-600 mb-6">
-                            Strategic tax planning and consultation services to help you minimize tax liabilities legally and maximize savings.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Tax Planning & Strategy</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Tax Notice Response & Representation</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>TDS Compliance & Advisory</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Tax Audit Services</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>International Taxation Advisory</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('Tax Consultancy')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                    <div class="bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Tax Consultancy" class="rounded-lg shadow-lg w-full">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Business Registration -->
-            <div id="business-registration" class="service-detail mb-20 scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1 bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop" alt="Business Registration" class="rounded-lg shadow-lg w-full">
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">Business Registration</h2>
-                        <p class="text-gray-600 mb-6">
-                            Complete business registration and incorporation services to help you start and structure your business legally.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Private Limited Company Registration</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>LLP Formation</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Partnership Firm Registration</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Sole Proprietorship Setup</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Business Licensing & Permits</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('Business Registration')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Compliance Management -->
-            <div id="compliance" class="service-detail mb-20 scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">Compliance Management</h2>
-                        <p class="text-gray-600 mb-6">
-                            Comprehensive compliance management to ensure your business meets all statutory and regulatory requirements.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>ROC Compliance & Annual Filings</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Board Meeting & AGM Management</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Statutory Registers Maintenance</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Director KYC & DIN Services</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Compliance Calendar & Reminders</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('Compliance Management')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                    <div class="bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop" alt="Compliance Management" class="rounded-lg shadow-lg w-full">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Financial Planning -->
-            <div id="financial-planning" class="service-detail scroll-mt-24">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1 bg-blue-50 rounded-xl p-8">
-                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Financial Planning" class="rounded-lg shadow-lg w-full">
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <div class="text-blue-900 text-5xl mb-6">
-                            <i class="fas fa-hand-holding-usd"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">Financial Planning</h2>
-                        <p class="text-gray-600 mb-6">
-                            Strategic financial planning and wealth management services to help you achieve your financial goals.
-                        </p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Personal Financial Planning</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Investment Advisory Services</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Retirement Planning</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Insurance Planning</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Estate Planning</span>
-                            </li>
-                        </ul>
-                        <button onclick="openServiceModal('Financial Planning')" class="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                            Book This Service
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Service Booking Modal -->
-    <div id="serviceModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="modal-content bg-white rounded-xl max-w-md w-full p-8 relative transform transition-all">
-            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            
-            <h3 class="text-2xl font-bold text-blue-900 mb-6">Book Service</h3>
-            
-            <form id="serviceBookingForm" class="space-y-4">
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Service</label>
-                    <input type="text" id="serviceSelected" name="service" readonly class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100">
-                </div>
-
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Name *</label>
-                    <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                </div>
-
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Email *</label>
-                    <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                </div>
-
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Phone *</label>
-                    <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                </div>
-
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Message</label>
-                    <textarea name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-lg hover:bg-blue-800 transition font-semibold">
-                    <span class="submit-text">Submit Booking</span>
-                    <span class="loading-text hidden">
-                        <i class="fas fa-spinner fa-spin mr-2"></i>Submitting...
-                    </span>
-                </button>
-            </form>
-
-            <div id="serviceFormMessage" class="hidden mt-4"></div>
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 opacity-90">Book a free consultation and let our experts guide you</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html"
+                    class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg"><i
+                        class="fas fa-calendar-alt mr-2"></i>Book Appointment</a>
+                <a href="contact.html"
+                    class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition shadow-lg"><i
+                        class="fas fa-phone mr-2"></i>Contact Us</a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">FinLegal Advisors</h3>
-                    <p class="text-gray-400">Professional financial and legal advisory services across India.</p>
+                    <h3 class="text-xl font-bold mb-4 company-name">Tax Brothers</h3>
+                    <p class="text-gray-400 company-tagline">Simplifying Tax, Empowering Business</p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
                         <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="appointment.html" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="services.html#pf" class="text-gray-400 hover:text-white transition">PF Registration</a></li>
-                        <li><a href="services.html#iec" class="text-gray-400 hover:text-white transition">IEC Registration</a></li>
-                        <li><a href="services.html#udyam" class="text-gray-400 hover:text-white transition">Udyam Registration</a></li>
-                        <li><a href="services.html#esic" class="text-gray-400 hover:text-white transition">ESIC Registration</a></li>
-                        <li><a href="services.html#gst" class="text-gray-400 hover:text-white transition">GST Registration</a></li>
-                        <li><a href="services.html#trademark" class="text-gray-400 hover:text-white transition">Trademark</a></li>
-                        <li><a href="services.html#company" class="text-gray-400 hover:text-white transition">Company Registration</a></li>
-                        <li><a href="services.html#tax-audit" class="text-gray-400 hover:text-white transition">Tax Audit</a></li>
-                        <li><a href="services.html#gst-return" class="text-gray-400 hover:text-white transition">GST Return</a></li>
-                        <li><a href="services.html#itr" class="text-gray-400 hover:text-white transition">ITR</a></li>
                     </ul>
                 </div>
 
@@ -404,35 +159,53 @@
                     <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-blue-400"></i>
-                            <a href="tel:+919555489525" class="text-gray-400 hover:text-white transition">+91 98765 43210</a>
+                            <a href="tel:+919669336755"
+                                class="phone-link text-gray-400 hover:text-white transition"><span
+                                    class="phone-display">+91 96693 36755</span></a>
                         </li>
                         <li class="flex items-center">
                             <i class="fab fa-whatsapp mr-3 text-green-400"></i>
-                            <a href="https://wa.me/919555489525" target="_blank" class="text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                            <a href="https://wa.me/919669336755" target="_blank"
+                                class="whatsapp-link text-gray-400 hover:text-white transition">WhatsApp Us</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-blue-400"></i>
-                            <a href="mailto:pkguptanassociates@gmail.com" class="text-gray-400 hover:text-white transition">pkguptanassociates@gmail.com</a>
+                            <a href="mailto:taxbrothers.co@gmail.com"
+                                class="email-link text-gray-400 hover:text-white transition">taxbrothers.co@gmail.com</a>
                         </li>
                     </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="address-full text-gray-400">H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA,
+                        NEW DELHI 110092</p>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p class="mb-2">© 2025 FinLegal Advisors. All rights reserved.</p>
+                <p class="mb-2">© 2025 <span class="company-name">Tax Brothers</span>. All rights reserved.</p>
                 <p class="text-sm">
-                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
+                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult
+                    with our advisors for specific tax and legal matters.
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919555489525" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-float whatsapp-link" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="js/data-loader.js"></script>
+    <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/forms.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadServicesPage();
+        });
+    </script>
 </body>
+
 </html>

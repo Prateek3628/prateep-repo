@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESIC (ESI) Services | Tax Brothers</title>
+    <meta name="description" content="Complete ESIC registration, monthly return filing, employee insurance management, and ESI compliance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/config.js"></script>
+    <script src="js/data-loader.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-900">
+                    <i class="fas fa-balance-scale mr-2"></i>
+                    <span class="company-name">Tax Brothers</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">HOME</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">ABOUT</a>
+                    <a href="services.html" class="text-blue-600 font-semibold">SERVICES</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">CONTACT</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="hidden md:hidden mt-4 space-y-2" id="mobile-menu">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition py-2">HOME</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 transition py-2">ABOUT</a>
+                <a href="services.html" class="block text-blue-600 font-semibold py-2">SERVICES</a>
+                <a href="faq.html" class="block text-gray-700 hover:text-blue-600 transition py-2">FAQ</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 transition py-2">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <img src="images/9.png" alt="ESIC (ESI) Services" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/70"></div>
+            <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+                <div class="text-6xl mb-4">
+                    <i class="fas fa-medkit"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">ESIC (ESI) Services</h1>
+                <p class="text-xl">Complete ESIC registration, monthly return filing, employee insurance management, and ESI compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-clipboard-check mr-3 text-blue-600"></i>
+                        ESIC Registration for Employers
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">New ESIC code allotment</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Establishment registration on ESIC portal</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Assistance with required documentation</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Setting up login & credentials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-calendar-alt mr-3 text-blue-600"></i>
+                        Monthly ESIC Return Filing
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Preparation & uploading of monthly ESI contributions</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Salary breakup verification for each employee</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Ensuring error-free submission</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Avoiding delays and penalties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-money-check mr-3 text-blue-600"></i>
+                        ESIC Challan Generation & Payment
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Generating monthly challan</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Verifying employee contributions</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Payment support and confirmation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-user-plus mr-3 text-blue-600"></i>
+                        Employee Registration (IP Creation)
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Adding new employees to ESIC</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Creating Insurance Number (IP Number)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Issuing ESI Pehchan Card</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Family details update</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-user-check mr-3 text-blue-600"></i>
+                        ESIC KYC Update
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Adding or correcting employee details</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Aadhaar, bank, mobile number linking</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Correction of DOB, gender, address</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-heartbeat mr-3 text-blue-600"></i>
+                        Accident & Sickness Benefit Support
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Filing accident reports (Form 12)</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Assistance in claiming medical benefits</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Guidance for maternity/sickness benefits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-search mr-3 text-blue-600"></i>
+                        ESIC Compliance Audit
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Detailed checking of payroll & contributions</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Identifying compliance gaps</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Statutory audit support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-clipboard-list mr-3 text-blue-600"></i>
+                        ESIC Inspection Handling
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Preparing required registers & records</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Representation before ESIC inspectors</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Responding to notices and queries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-edit mr-3 text-blue-600"></i>
+                        ESIC Correction Services
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Employer details correction</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Modification of employee wages</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Rectification of wrongly submitted contributions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-sign-out-alt mr-3 text-blue-600"></i>
+                        ESIC Exit & Rejoining Formalities
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Employee exit process on portal</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Rejoining process without duplication</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Maintaining clean compliance records</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-question-circle mr-3 text-blue-600"></i>
+                        Consultancy for New Establishments
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Applicability checks for ESIC</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Employee coverage rules</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Contribution structure explanation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i class="fas fa-hands-helping mr-3 text-blue-600"></i>
+                        Support in ESIC Grievances & Claims
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Help with rejected claims</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Assistance with reimbursement cases</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Guiding employees with hospital/medical documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Need ESIC (ESI) Services?</h2>
+            <p class="text-xl mb-8 opacity-90">Let our experts handle all your compliance needs</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i>Book Appointment
+                </a>
+                <a href="services.html" class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition shadow-lg">
+                    <i class="fas fa-arrow-left mr-2"></i>All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+            <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 company-name">Tax Brothers</h3>
+                    <p class="text-gray-400 company-tagline">Simplifying Tax, Empowering Business</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <a href="tel:+919669336755" class="phone-link text-gray-400 hover:text-white transition"><span class="phone-display">+91 96693 36755</span></a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-green-400"></i>
+                            <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-link text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <a href="mailto:taxbrothers.co@gmail.com" class="email-link text-gray-400 hover:text-white transition">taxbrothers.co@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="address-full text-gray-400">H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA, NEW DELHI 110092</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p class="mb-2">© 2025 <span class="company-name">Tax Brothers</span>. All rights reserved.</p>
+                <p class="text-sm">
+                    <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-float whatsapp-link" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<script src="js/animations.js"></script>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

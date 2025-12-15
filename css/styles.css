@@ -5,18 +5,114 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Animations */
+/* Base Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Animation Classes */
 .fade-in {
     animation: fadeIn 0.8s ease-out;
 }
@@ -29,13 +125,116 @@ html {
     animation: fadeIn 0.8s ease-out 0.4s both;
 }
 
+.fade-in-delay-3 {
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+/* Scroll Animation Classes */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-fade-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-fade-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered Animation Delays */
+.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+.stagger-4 {
+    transition-delay: 0.4s;
+}
+
+.stagger-5 {
+    transition-delay: 0.5s;
+}
+
+.stagger-6 {
+    transition-delay: 0.6s;
+}
+
 /* Service Cards Hover Effect */
 .service-card {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Card Overlay Styles */
+.service-card-overlay {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-overlay:hover {
+    box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+}
+
+.service-card-overlay img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-overlay:hover img {
+    transform: scale(1.15);
+}
+
+.service-card-overlay .absolute {
+    transition: all 0.3s ease;
+}
+
+.service-card-overlay:hover a {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* WhatsApp Floating Button */
@@ -120,7 +319,41 @@ html {
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* Button Ripple Effect */
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 /* Form Focus States */
@@ -142,6 +375,18 @@ select:focus {
 /* Card Shadows */
 .shadow-custom {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-custom:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Card Styles */
+.bg-white,
+.rounded-xl,
+.rounded-lg {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Responsive Typography */
@@ -149,11 +394,11 @@ select:focus {
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.75rem;
     }
-    
+
     h3 {
         font-size: 1.25rem;
     }
@@ -184,8 +429,13 @@ select:focus {
 
 /* Loading Animation */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .fa-spin {
@@ -216,7 +466,7 @@ textarea:valid:not(:placeholder-shown) {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         linear-gradient(30deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
         linear-gradient(150deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
         linear-gradient(30deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
@@ -226,7 +476,326 @@ textarea:valid:not(:placeholder-shown) {
     z-index: 0;
 }
 
-.hero-section > * {
+.hero-section>* {
     position: relative;
     z-index: 1;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.services-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+}
+
+.service-slide {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.service-slide.hidden {
+    display: none;
+}
+
+.slide-prev,
+.slide-next,
+.prev-slide,
+.next-slide,
+.slide-nav {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.slide-prev:hover,
+.slide-next:hover,
+.prev-slide:hover,
+.next-slide:hover,
+.slide-nav:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slide-prev,
+.prev-slide {
+    left: -20px;
+}
+
+.slide-next,
+.next-slide {
+    right: -20px;
+}
+
+.slide-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.slide-dot,
+.dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slide-dot:hover,
+.dot:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+
+    .slide-prev,
+    .prev-slide {
+        left: 10px;
+    }
+
+    .slide-next,
+    .next-slide {
+        right: 10px;
+    }
+}
+
+/* Why Choose Slideshow Styles */
+.why-choose-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.why-slides-container {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+}
+
+.why-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.why-slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+}
+
+.why-slide-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.why-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.why-dot:hover {
+    transform: scale(1.2);
+}
+
+/* Stats Counter Animation */
+.stats-container>div {
+    transition: all 0.3s ease;
+}
+
+.stats-container>div:hover {
+    transform: translateY(-5px);
+}
+
+.stats-container>div:hover .text-4xl {
+    color: #1e40af;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Icon Hover Effects */
+i {
+    transition: all 0.3s ease;
+}
+
+.fa-check-circle:hover,
+.fa-briefcase:hover,
+.fa-balance-scale:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Link Hover Effects */
+a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* FAQ Accordion Animation */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 500px;
+}
+
+/* Process Step Hover */
+.process-grid>div {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-grid>div:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.process-grid>div:hover .bg-blue-900 {
+    animation: pulse 1s infinite;
+}
+
+/* Why Choose Us Card Hover */
+.why-choose-grid>div,
+.why-slide {
+    transition: all 0.3s ease;
+}
+
+/* Header Animation on Scroll */
+header {
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Hover Effects */
+img {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Form Input Animations */
+input,
+textarea,
+select {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(30, 58, 138, 0.1);
+}
+
+/* Floating Animation for Icons */
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Slide Transition Enhancement */
+.slide {
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+}
+
+#mobile-menu:not(.hidden) {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Loading State Animations */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    animation: shimmer 2s infinite;
 }

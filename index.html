@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Financial Advisor | GST, ITR & Tax Consultation Services</title>
-    <meta name="description" content="Expert GST Registration, ITR Filing, Tax Consultation, and Compliance Management services in India.">
+    <title>Tax Brothers | GST, ITR & Tax Consultation Services</title>
+    <meta name="description" content="Expert GST Registration, ITR Filing, Tax Consultation, and Compliance Management services in India. Fast, accurate, and completely online.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/config.js"></script>
 </head>
 <body class="font-sans bg-gray-50">
     
@@ -17,14 +18,15 @@
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold text-blue-900">
                     <i class="fas fa-balance-scale mr-2"></i>
-                    <span>FinLegal Advisors</span>
+                    <span class="company-name">Tax Brothers</span>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-blue-900 hover:text-blue-600 transition">Home</a>
+                    <a href="index.html" class="nav-link text-blue-600 font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition">About</a>
                     <a href="services.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Services</a>
-                    <a href="appointment.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Book Appointment</a>
+                    <a href="faq.html" class="nav-link text-gray-700 hover:text-blue-600 transition">FAQ</a>
                     <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
                 </div>
 
@@ -36,29 +38,41 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="index.html" class="block py-2 text-blue-900 hover:text-blue-600">Home</a>
+                <a href="index.html" class="block py-2 text-blue-600 font-semibold">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
                 <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
-                <a href="appointment.html" class="block py-2 text-gray-700 hover:text-blue-600">Book Appointment</a>
+                <a href="faq.html" class="block py-2 text-gray-700 hover:text-blue-600">FAQ</a>
                 <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section pt-32 pb-20 bg-gradient-to-br from-blue-50 to-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6 fade-in">
-                    Expert Financial & Tax Advisory Services
+    <!-- Hero Section with Background Image -->
+    <section class="hero-section relative text-white overflow-hidden bg-gray-900" style="min-height: 500px; height: 70vh; max-height: 800px;">
+        <!-- Full Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/1.png" alt="Hero Background" class="w-full h-full" style="object-fit: contain; object-position: center;" onerror="this.style.display='none'">
+            <!-- Dark overlay for better text readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/40 to-blue-900/30"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-10 w-full h-full flex items-center">
+            <div class="max-w-6xl w-full">
+                <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 fade-in leading-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                    From Registration to Returns — Everything in One Place
                 </h1>
-                <p class="text-xl text-gray-700 mb-8 fade-in-delay">
-                    Professional GST Registration, ITR Filing, Tax Consultation, and Compliance Management for individuals and businesses across India.
+                <p class="hero-tagline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6 fade-in-delay" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                    Simplifying Tax, Empowering Business
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-delay-2">
-                    <a href="appointment.html" class="btn-primary bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg">
-                        Book Consultation
+                <p class="hero-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 fade-in-delay-2 max-w-4xl" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.7);">
+                    End-to-end tax filing, GST, company registration and compliance—done fast, accurate, and completely online.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-delay-3">
+                    <a href="appointment.html" class="btn-primary bg-white text-blue-900 px-8 md:px-10 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition shadow-lg font-semibold text-base md:text-lg text-center">
+                        Consult Now
                     </a>
-                    <a href="services.html" class="btn-secondary bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-gray-50 transition shadow-lg border border-blue-900">
+                    <a href="services.html" class="btn-secondary bg-transparent border-2 border-white text-white px-8 md:px-10 py-3 md:py-4 rounded-lg hover:bg-white hover:text-blue-900 transition shadow-lg font-semibold text-base md:text-lg text-center">
                         View Services
                     </a>
                 </div>
@@ -66,210 +80,93 @@
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="py-20 bg-white">
+    <!-- Stats Section -->
+    <section class="py-16 bg-white scroll-animate">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive financial and legal advisory services tailored to your needs</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">PF Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Complete Provident Fund registration and compliance services for employers and employees.
-                    </p>
-                    <a href="services.html#pf" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-file-code"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">IEC Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Import Export Code registration for businesses looking to engage in international trade.
-                    </p>
-                    <a href="services.html#iec" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Udyam Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        MSME/Udyam registration for small and medium enterprises to avail government benefits.
-                    </p>
-                    <a href="services.html#udyam" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">ESIC Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Employee State Insurance Corporation registration and compliance for employee welfare.
-                    </p>
-                    <a href="services.html#esic" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">GST Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Complete GST registration and compliance services for businesses of all sizes.
-                    </p>
-                    <a href="services.html#gst" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-trademark"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Trademark Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Protect your brand with trademark registration and intellectual property services.
-                    </p>
-                    <a href="services.html#trademark" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 7 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Company Registration</h3>
-                    <p class="text-gray-600 mb-4">
-                        Private Limited, LLP, OPC, and all types of company incorporation services.
-                    </p>
-                    <a href="services.html#company" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 8 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">Tax Audit</h3>
-                    <p class="text-gray-600 mb-4">
-                        Professional tax audit services ensuring compliance and accuracy in tax filings.
-                    </p>
-                    <a href="services.html#tax-audit" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 9 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-receipt"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">GST Return</h3>
-                    <p class="text-gray-600 mb-4">
-                        Monthly, quarterly, and annual GST return filing with complete accuracy and compliance.
-                    </p>
-                    <a href="services.html#gst-return" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <!-- Service Card 10 -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="text-blue-900 text-4xl mb-4">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-900 mb-3">ITR</h3>
-                    <p class="text-gray-600 mb-4">
-                        Income Tax Return filing for individuals and businesses with maximum tax savings.
-                    </p>
-                    <a href="services.html#itr" class="text-blue-600 hover:text-blue-800 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
+            <div class="stats-container grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Stats will be loaded dynamically from config.js -->
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-20 bg-blue-900 text-white">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
-                <p class="text-blue-200 max-w-2xl mx-auto">Professional expertise you can trust</p>
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Why Choose Tax Brothers?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Professional expertise you can trust for all your tax and compliance needs</p>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Expert Advisors</h3>
-                    <p class="text-blue-200">Certified professionals with years of experience</p>
-                </div>
+            <div class="why-choose-grid scroll-scale">
+                <!-- Why Choose Us will be loaded dynamically from config.js -->
+            </div>
+        </div>
+    </section>
 
-                <div class="text-center">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">100% Compliance</h3>
-                    <p class="text-blue-200">Full adherence to legal and regulatory requirements</p>
-                </div>
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive tax and compliance services tailored to your needs</p>
+            </div>
 
-                <div class="text-center">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Timely Service</h3>
-                    <p class="text-blue-200">Quick turnaround and deadline-driven approach</p>
-                </div>
+            <div class="services-grid scroll-scale">
+                <!-- Services will be loaded dynamically from config.js -->
+            </div>
 
-                <div class="text-center">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-blue-200">Always available to assist you</p>
-                </div>
+            <!-- Explore All Services Button -->
+            <div class="text-center mt-12 scroll-animate">
+                <a href="services.html" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition shadow-lg font-semibold">
+                    Explore All Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Process of Doing Work</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Simple • Transparent • Hassle-Free</p>
+            </div>
+
+            <div class="process-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 scroll-animate">
+                <!-- Process will be loaded dynamically from config.js -->
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto scroll-scale">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Why Clients Trust Our Process</h3>
+                <ul class="process-trust space-y-3 text-lg">
+                    <!-- Trust points will be loaded dynamically from config.js -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our services</p>
+            </div>
+
+            <div class="faq-container max-w-4xl mx-auto space-y-4 scroll-animate">
+                <!-- FAQs will be loaded dynamically from config.js -->
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-20 bg-blue-900 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Ready to Get Started?</h2>
-            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                Book a consultation today and let our experts handle your financial and legal requirements.
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Book a consultation today and let our experts handle your tax and compliance requirements.
             </p>
-            <a href="appointment.html" class="inline-block bg-blue-900 text-white px-10 py-4 rounded-lg hover:bg-blue-800 transition shadow-lg text-lg font-semibold">
+            <a href="appointment.html" class="inline-block bg-white text-blue-900 px-10 py-4 rounded-lg hover:bg-gray-100 transition shadow-lg text-lg font-semibold">
                 Book Free Consultation
             </a>
         </div>
@@ -280,33 +177,17 @@
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">FinLegal Advisors</h3>
-                    <p class="text-gray-400">Professional financial and legal advisory services across India.</p>
+                    <h3 class="text-xl font-bold mb-4 company-name">Tax Brothers</h3>
+                    <p class="text-gray-400 company-tagline">Simplifying Tax, Empowering Business</p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
                         <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="appointment.html" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="services.html#pf" class="text-gray-400 hover:text-white transition">PF Registration</a></li>
-                        <li><a href="services.html#iec" class="text-gray-400 hover:text-white transition">IEC Registration</a></li>
-                        <li><a href="services.html#udyam" class="text-gray-400 hover:text-white transition">Udyam Registration</a></li>
-                        <li><a href="services.html#esic" class="text-gray-400 hover:text-white transition">ESIC Registration</a></li>
-                        <li><a href="services.html#gst" class="text-gray-400 hover:text-white transition">GST Registration</a></li>
-                        <li><a href="services.html#trademark" class="text-gray-400 hover:text-white transition">Trademark</a></li>
-                        <li><a href="services.html#company" class="text-gray-400 hover:text-white transition">Company Registration</a></li>
-                        <li><a href="services.html#tax-audit" class="text-gray-400 hover:text-white transition">Tax Audit</a></li>
-                        <li><a href="services.html#gst-return" class="text-gray-400 hover:text-white transition">GST Return</a></li>
-                        <li><a href="services.html#itr" class="text-gray-400 hover:text-white transition">ITR</a></li>
                     </ul>
                 </div>
 
@@ -315,22 +196,27 @@
                     <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-blue-400"></i>
-                            <a href="tel:+919555489525" class="text-gray-400 hover:text-white transition">+91 98765 43210</a>
+                            <a href="tel:+919669336755" class="phone-link text-gray-400 hover:text-white transition"><span class="phone-display">+91 96693 36755</span></a>
                         </li>
                         <li class="flex items-center">
                             <i class="fab fa-whatsapp mr-3 text-green-400"></i>
-                            <a href="https://wa.me/919555489525" target="_blank" class="text-gray-400 hover:text-white transition">WhatsApp Us</a>
+                            <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-link text-gray-400 hover:text-white transition">WhatsApp Us</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-blue-400"></i>
-                            <a href="mailto:pkguptanassociates@gmail.com" class="text-gray-400 hover:text-white transition">pkguptanassociates@gmail.com</a>
+                            <a href="mailto:taxbrothers.co@gmail.com" class="email-link text-gray-400 hover:text-white transition">taxbrothers.co@gmail.com</a>
                         </li>
                     </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="address-full text-gray-400">H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA, NEW DELHI 110092</p>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p class="mb-2">© 2025 FinLegal Advisors. All rights reserved.</p>
+                <p class="mb-2">© 2025 <span class="company-name">Tax Brothers</span>. All rights reserved.</p>
                 <p class="text-sm">
                     <strong>Disclaimer:</strong> The information provided is for general guidance only. Please consult with our advisors for specific tax and legal matters.
                 </p>
@@ -339,10 +225,12 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919555489525" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <a href="https://wa.me/919669336755" target="_blank" class="whatsapp-float whatsapp-link" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="js/data-loader.js"></script>
+    <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
