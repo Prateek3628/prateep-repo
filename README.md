@@ -188,7 +188,7 @@ const GOOGLE_SHEETS_CONFIG = {
 Replace the placeholder contact details in all HTML files:
 - Phone: `+91 96693 36755`
 - WhatsApp: `https://wa.me/919555489525`
-- Email: `taxbrothers.co@gmail.com,`
+- Email: `contact@taxbrothers.in,`
 - Address: Update in `contact.html`
 
 ### Update Company Name

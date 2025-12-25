@@ -459,22 +459,7 @@ textarea:valid:not(:placeholder-shown) {
     overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        linear-gradient(30deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
-        linear-gradient(150deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
-        linear-gradient(30deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02)),
-        linear-gradient(150deg, rgba(30, 58, 138, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(30, 58, 138, 0.02) 87.5%, rgba(30, 58, 138, 0.02));
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
-    z-index: 0;
-}
+/* Removed background pattern to match about and services pages */
 
 .hero-section>* {
     position: relative;
@@ -498,7 +483,26 @@ textarea:valid:not(:placeholder-shown) {
 .slides-container {
     position: relative;
     width: 100%;
-    min-height: 650px;
+    height: 600px;
+}
+
+/* Custom scrollbar for service cards */
+.slides-container .overflow-y-auto::-webkit-scrollbar {
+    width: 6px;
+}
+
+.slides-container .overflow-y-auto::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 3px;
+}
+
+.slides-container .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+.slides-container .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
 }
 
 .slide {

@@ -12,18 +12,18 @@ const CONFIG = {
   business: {
     companyName: "Tax Brothers",
     tagline: "Simplifying Tax, Empowering Business",
-    
+
     phone: {
       display: "+91 96693 36755",
       link: "+919669336755",
       whatsapp: "919669336755"
     },
-    
+
     email: {
-      primary: "taxbrothers.co@gmail.com",
+      primary: "contact@taxbrothers.in",
       support: "contact@taxbrothers.in"
     },
-    
+
     address: {
       line1: "H15, 2ND FLOOR, HOD BUILDING",
       line2: "HARGOVIND ENCLAVE, KARKARDOOMA",
@@ -33,20 +33,19 @@ const CONFIG = {
       country: "India",
       full: "H15, 2ND FLOOR, HOD BUILDING, HARGOVIND ENCLAVE, KARKARDOOMA, NEW DELHI 110092"
     },
-    
+
     hours: {
       weekdays: "10:00 AM - 7:00 PM",
       saturday: "10:00 AM - 5:00 PM",
       sunday: "Closed"
     },
-    
+
     social: {
-      facebook: "https://facebook.com/taxbrothers",
-      twitter: "https://twitter.com/taxbrothers",
-      linkedin: "https://linkedin.com/company/taxbrothers",
-      instagram: "https://instagram.com/taxbrothers"
+      facebook: "https://facebook.com/taxbrothers.in",
+      instagram: "https://instagram.com/taxbrothers.in",
+      youtube: "https://youtube.com/@taxbrothersindia"
     },
-    
+
     maps: {
       embedUrl: "PASTE_YOUR_GOOGLE_MAPS_EMBED_URL_HERE",
       directionsUrl: "https://maps.google.com/?q=H15+Hargovind+Enclave+Karkardooma+Delhi"
@@ -1611,7 +1610,7 @@ const CONFIG = {
       question: "Are your services available online?",
       answer: "Yes. All our services are 100% online. Documents can be shared via WhatsApp or email, and certificates/filings are delivered digitally."
     },
-    
+
     // General Services
     {
       category: "General Services",
@@ -1643,7 +1642,7 @@ const CONFIG = {
       question: "Is my data safe with Tax Brothers?",
       answer: "Yes. We maintain strict confidentiality and secure handling of all personal and financial data. Client data is never shared with third parties."
     },
-    
+
     // GST Services
     {
       category: "GST Services",
@@ -1657,7 +1656,7 @@ const CONFIG = {
       question: "Can you handle GST notices and compliance issues?",
       answer: "Absolutely. We assist with GST notices, demand replies, mismatches, ITC issues, and assessments."
     },
-    
+
     // Income Tax Services
     {
       category: "Income Tax Services",
@@ -1677,7 +1676,7 @@ const CONFIG = {
       question: "Can you handle Income Tax notices?",
       answer: "Yes. We assist with IT notices, scrutiny cases, rectifications, and compliance responses."
     },
-    
+
     // Company & Business Registration
     {
       category: "Company & Business Registration",
@@ -1691,7 +1690,7 @@ const CONFIG = {
       question: "Do you provide post-incorporation compliance?",
       answer: "Yes. We manage ROC filings, annual compliance, director KYC, accounting setup, and tax registrations after incorporation."
     },
-    
+
     // Accounting & Compliance
     {
       category: "Accounting & Compliance",
@@ -1705,7 +1704,7 @@ const CONFIG = {
       question: "Do you offer monthly compliance packages?",
       answer: "Yes. We provide monthly and yearly compliance packages for businesses covering GST, accounting, TDS, PF/ESIC, and MCA filings."
     },
-    
+
     // PF, ESIC & Payroll
     {
       category: "PF, ESIC & Payroll",
@@ -1713,7 +1712,7 @@ const CONFIG = {
       question: "Do you handle PF and ESIC registrations and returns?",
       answer: "Yes. We provide PF & ESIC registration, monthly returns, challans, employee onboarding, and compliance support."
     },
-    
+
     // Trademark, ISO, FSSAI & Others
     {
       category: "Trademark, ISO, FSSAI & Others",
@@ -1739,7 +1738,7 @@ const CONFIG = {
       question: "Do you help with IEC, DSC, and Udyam registration?",
       answer: "Yes. We provide IEC registration, DSC issuance/renewal, and Udyam (MSME) registration & updates."
     },
-    
+
     // Pricing & Support
     {
       category: "Pricing & Support",
@@ -1785,7 +1784,7 @@ const CONFIG = {
         link: "services.html"
       }
     },
-    
+
     whyChooseUs: [
       {
         icon: "fas fa-star",
@@ -1818,7 +1817,7 @@ const CONFIG = {
         description: "Your financial data is fully protected with industry-standard security and strict confidentiality."
       },
       {
-        icon: "fas fa-rupee-sign",
+        icon: "fas fa-indian-rupee-sign",
         title: "Affordable Pricing",
         description: "Professional services at pocket-friendly rates—perfect for startups, small businesses, and individuals."
       }
@@ -1871,7 +1870,7 @@ const CONFIG = {
     ],
 
     stats: [
-      { number: "5000+", label: "Happy Clients" },
+      { number: "1500+", label: "Happy Clients" },
       { number: "10000+", label: "Returns Filed" },
       { number: "10+", label: "Years Experience" },
       { number: "99%", label: "Success Rate" }
@@ -1882,7 +1881,7 @@ const CONFIG = {
   // GOOGLE SHEETS CONFIGURATION
   // ==========================================
   googleSheets: {
-    scriptUrl: "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",
+    scriptUrl: "https://script.google.com/macros/s/AKfycbwQYmqAGf_o82LP1Esja6DC29ljnWlHcCiT0QYDGIStAlmGbnhY7_EIJUyEyqCYQ3HT/exec",
     sheets: {
       serviceBookings: "ServiceBookings",
       appointments: "Appointments",

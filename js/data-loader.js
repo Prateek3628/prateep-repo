@@ -3,7 +3,7 @@
  * Dynamically loads content from config.js into all pages
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadBusinessInfo();
     loadPageSpecificContent();
 });
@@ -11,30 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load business information (header, footer, contact info)
 function loadBusinessInfo() {
     const { business } = CONFIG;
-    
+
     // Update company name in header
     document.querySelectorAll('.company-name').forEach(el => {
         el.textContent = business.companyName;
     });
-    
+
     // Update tagline
     document.querySelectorAll('.company-tagline').forEach(el => {
         el.textContent = business.tagline;
     });
-    
+
     // Update phone numbers
     document.querySelectorAll('.phone-display').forEach(el => {
         el.textContent = business.phone.display;
     });
-    
+
     document.querySelectorAll('.phone-link').forEach(el => {
         el.href = `tel:${business.phone.link}`;
     });
-    
+
     document.querySelectorAll('.whatsapp-link').forEach(el => {
         el.href = `https://wa.me/${business.phone.whatsapp}`;
     });
-    
+
     // Update email
     document.querySelectorAll('.email-link').forEach(el => {
         el.href = `mailto:${business.email.primary}`;
@@ -42,17 +42,17 @@ function loadBusinessInfo() {
             el.textContent = business.email.primary;
         }
     });
-    
+
     document.querySelectorAll('.email-support').forEach(el => {
         el.href = `mailto:${business.email.support}`;
         el.textContent = business.email.support;
     });
-    
+
     // Update address
     document.querySelectorAll('.address-full').forEach(el => {
         el.textContent = business.address.full;
     });
-    
+
     // Update business hours
     const hoursContainer = document.querySelector('.business-hours');
     if (hoursContainer) {
@@ -62,13 +62,35 @@ function loadBusinessInfo() {
             <p><strong>Sunday:</strong> ${business.hours.sunday}</p>
         `;
     }
+
+    // Update social media links
+    const socialFacebook = document.querySelectorAll('.social-facebook');
+    if (socialFacebook && business.social.facebook) {
+        socialFacebook.forEach(el => {
+            el.href = business.social.facebook;
+        });
+    }
+
+    const socialInstagram = document.querySelectorAll('.social-instagram');
+    if (socialInstagram && business.social.instagram) {
+        socialInstagram.forEach(el => {
+            el.href = business.social.instagram;
+        });
+    }
+
+    const socialYoutube = document.querySelectorAll('.social-youtube');
+    if (socialYoutube && business.social.youtube) {
+        socialYoutube.forEach(el => {
+            el.href = business.social.youtube;
+        });
+    }
 }
 
 // Load page-specific content
 function loadPageSpecificContent() {
     const currentPage = getCurrentPage();
-    
-    switch(currentPage) {
+
+    switch (currentPage) {
         case 'index':
             loadHomePage();
             break;
@@ -97,17 +119,17 @@ function getCurrentPage() {
 // Load home page content
 function loadHomePage() {
     const { home, showcaseServices, faqs } = CONFIG;
-    
+
     // Update hero section
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) heroTitle.textContent = home.hero.title;
-    
+
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) heroSubtitle.textContent = home.hero.subtitle;
-    
+
     const heroTagline = document.querySelector('.hero-tagline');
     if (heroTagline) heroTagline.textContent = home.hero.tagline;
-    
+
     // Load stats
     const statsContainer = document.querySelector('.stats-container');
     if (statsContainer) {
@@ -118,33 +140,35 @@ function loadHomePage() {
             </div>
         `).join('');
     }
-    
+
     // Load showcase services overview (display only, no links to service pages)
     const servicesContainer = document.querySelector('.services-grid');
     if (servicesContainer && showcaseServices) {
         servicesContainer.innerHTML = `
-            <div class="services-slideshow relative max-w-7xl mx-auto px-4">
+            <div class="services-slideshow relative max-w-7xl mx-auto px-2 sm:px-4">
                 <!-- Slides Container -->
-                <div class="slides-container relative rounded-xl bg-white shadow-2xl overflow-hidden" style="min-height: 650px;">
+                <div class="slides-container relative rounded-xl bg-white shadow-2xl overflow-hidden" style="min-height: 400px;">
                     ${showcaseServices.map((service, index) => `
                         <div class="slide ${index === 0 ? 'active' : ''}" data-slide="${index}">
-                            <div class="grid md:grid-cols-2 gap-12 p-10 items-center h-full">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 items-stretch">
                                 <!-- Content Side -->
-                                <div class="flex flex-col justify-center order-2 md:order-1">
-                                    <h3 class="text-4xl font-bold text-blue-900 mb-6 border-b-4 border-blue-600 pb-4 inline-block">${service.name}</h3>
-                                    <ul class="space-y-4 mt-6">
-                                        ${service.features.map(feature => `
-                                            <li class="flex items-start">
-                                                <i class="fas fa-check-circle text-blue-600 mr-4 mt-1 text-xl"></i>
-                                                <span class="text-gray-700 text-lg leading-relaxed">${feature}</span>
-                                            </li>
-                                        `).join('')}
-                                    </ul>
+                                <div class="flex flex-col justify-start order-2 md:order-1">
+                                    <h3 class="text-2xl md:text-3xl font-bold text-blue-900 mb-3 md:mb-4 border-b-4 border-blue-600 pb-2 md:pb-3">${service.name}</h3>
+                                    <div class="overflow-y-auto flex-1 pr-2" style="max-height: 280px;">
+                                        <ul class="space-y-2 md:space-y-3">
+                                            ${service.features.map(feature => `
+                                                <li class="flex items-start">
+                                                    <i class="fas fa-check-circle text-blue-600 mr-2 md:mr-3 mt-1 text-base md:text-lg flex-shrink-0"></i>
+                                                    <span class="text-gray-700 text-sm md:text-base leading-relaxed">${feature}</span>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- Image Side -->
-                                <div class="flex items-center justify-center order-1 md:order-2">
-                                    <div class="w-full max-w-md bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg">
-                                        <img src="${service.image}" alt="${service.name}" class="w-full h-auto object-contain" style="max-height: 400px;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=text-blue-900 text-6xl text-center><i class=fas fa-briefcase></i></div>'">
+                                <div class="flex items-center justify-center order-1 md:order-2 mb-4 md:mb-0">
+                                    <div class="w-full max-w-md bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 md:p-6 shadow-lg flex items-center justify-center" style="min-height: 250px; max-height: 400px;">
+                                        <img src="${service.image}" alt="${service.name}" class="w-full h-auto object-contain" style="max-height: 350px;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=text-blue-900 text-4xl md:text-6xl text-center><i class=fas fa-briefcase></i></div>'">
                                     </div>
                                 </div>
                             </div>
@@ -153,18 +177,18 @@ function loadHomePage() {
                 </div>
                 
                 <!-- Dots Indicator -->
-                <div class="slide-dots flex justify-center items-center gap-3 mt-8">
+                <div class="slide-dots flex justify-center items-center gap-2 md:gap-3 mt-6 md:mt-8">
                     ${showcaseServices.map((_, index) => `
-                        <button class="dot w-4 h-4 rounded-full transition-all ${index === 0 ? 'bg-blue-900 scale-125' : 'bg-gray-300'}" data-slide="${index}"></button>
+                        <button class="dot w-3 h-3 md:w-4 md:h-4 rounded-full transition-all ${index === 0 ? 'bg-blue-900 scale-125' : 'bg-gray-300'}" data-slide="${index}"></button>
                     `).join('')}
                 </div>
             </div>
         `;
-        
+
         // Initialize slideshow
         initializeSlideshow();
     }
-    
+
     // Load Why Choose Us
     const whyChooseContainer = document.querySelector('.why-choose-grid');
     if (whyChooseContainer) {
@@ -193,11 +217,11 @@ function loadHomePage() {
                 </div>
             </div>
         `;
-        
+
         // Initialize Why Choose slideshow
         initializeWhyChooseSlideshow();
     }
-    
+
     // Load Process
     const processContainer = document.querySelector('.process-grid');
     if (processContainer) {
@@ -214,7 +238,7 @@ function loadHomePage() {
             </div>
         `).join('');
     }
-    
+
     // Load Process Trust Points
     const processTrustContainer = document.querySelector('.process-trust');
     if (processTrustContainer) {
@@ -225,7 +249,7 @@ function loadHomePage() {
             </li>
         `).join('');
     }
-    
+
     // Load FAQs
     loadFAQs();
 }
@@ -233,7 +257,7 @@ function loadHomePage() {
 // Load services page
 function loadServicesPage() {
     const { services } = CONFIG;
-    
+
     const servicesContainer = document.getElementById('services-container');
     if (servicesContainer && services && services.length > 0) {
         servicesContainer.innerHTML = services.map(service => `
@@ -268,7 +292,7 @@ function loadServicesPage() {
 function loadServicesFAQs() {
     const { servicesFaqs } = CONFIG;
     const faqContainer = document.querySelector('.services-faq-container');
-    
+
     if (faqContainer && servicesFaqs && servicesFaqs.length > 0) {
         // Show only first 3 FAQs on services page
         const limitedFaqs = servicesFaqs.slice(0, 3);
@@ -286,7 +310,7 @@ function loadServicesFAQs() {
                 </div>
             </div>
         `).join('');
-        
+
         // Add "View All FAQs" button
         if (servicesFaqs.length > 3) {
             faqContainer.innerHTML += `
@@ -315,15 +339,15 @@ function loadContactPage() {
 function loadServiceOptions() {
     const { services, showcaseServices } = CONFIG;
     const serviceSelects = document.querySelectorAll('.service-select');
-    
+
     // Use actual services if available, otherwise use showcase services for contact forms
     const servicesToUse = (services && services.length > 0) ? services : showcaseServices;
-    
+
     serviceSelects.forEach(select => {
         // Keep the first option (placeholder)
         const firstOption = select.querySelector('option');
         select.innerHTML = firstOption ? firstOption.outerHTML : '<option value="">Select a service</option>';
-        
+
         // Add service options
         if (servicesToUse && servicesToUse.length > 0) {
             servicesToUse.forEach(service => {
@@ -340,7 +364,7 @@ function loadServiceOptions() {
 function loadFAQs() {
     const { faqs } = CONFIG;
     const faqContainer = document.querySelector('.faq-container');
-    
+
     if (faqContainer) {
         // Show only first 3 FAQs on home page
         const homeFaqs = faqs.slice(0, 3);
@@ -358,7 +382,7 @@ function loadFAQs() {
                 </div>
             </div>
         `).join('');
-        
+
         // Add "View All FAQs" button
         if (faqs.length > 3) {
             faqContainer.innerHTML += `
@@ -376,7 +400,7 @@ function loadFAQs() {
 function loadFAQPage() {
     const { universalFaqs } = CONFIG;
     const faqContainer = document.querySelector('.faq-container-full');
-    
+
     if (faqContainer && universalFaqs) {
         // Group FAQs by category
         const categories = {};
@@ -386,10 +410,10 @@ function loadFAQPage() {
             }
             categories[faq.category].push(faq);
         });
-        
+
         let html = '';
         let globalIndex = 0;
-        
+
         // Generate HTML for each category
         Object.keys(categories).forEach(categoryName => {
             html += `
@@ -399,7 +423,7 @@ function loadFAQPage() {
                     </h3>
                     <div class="space-y-4">
             `;
-            
+
             categories[categoryName].forEach(faq => {
                 html += `
                     <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
@@ -417,13 +441,13 @@ function loadFAQPage() {
                 `;
                 globalIndex++;
             });
-            
+
             html += `
                     </div>
                 </div>
             `;
         });
-        
+
         faqContainer.innerHTML = html;
     }
 }
@@ -432,7 +456,7 @@ function loadFAQPage() {
 function toggleFAQ(index) {
     const answer = document.getElementById(`faq-answer-${index}`);
     const icon = document.getElementById(`faq-icon-${index}`);
-    
+
     if (answer.classList.contains('hidden')) {
         answer.classList.remove('hidden');
         icon.style.transform = 'rotate(180deg)';
@@ -448,25 +472,25 @@ function initializeSlideshow() {
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.querySelector('.prev-slide');
     const nextBtn = document.querySelector('.next-slide');
-    
+
     if (slides.length === 0) return;
-    
+
     let currentSlide = 0;
     let autoPlayInterval;
-    
+
     // Show specific slide
     function showSlide(index) {
         // Remove active class from all slides
         slides.forEach(slide => {
             slide.classList.remove('active');
         });
-        
+
         // Update dots
         dots.forEach(dot => {
             dot.classList.remove('bg-blue-900', 'scale-125');
             dot.classList.add('bg-gray-300');
         });
-        
+
         // Show current slide
         slides[index].classList.add('active');
         if (dots[index]) {
@@ -474,19 +498,19 @@ function initializeSlideshow() {
             dots[index].classList.add('bg-blue-900', 'scale-125');
         }
     }
-    
+
     // Next slide
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
-    
+
     // Previous slide
     function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
     }
-    
+
     // Start auto-play (5 seconds)
     function startAutoPlay() {
         if (autoPlayInterval) {
@@ -494,14 +518,14 @@ function initializeSlideshow() {
         }
         autoPlayInterval = setInterval(nextSlide, 5000);
     }
-    
+
     // Stop auto-play
     function stopAutoPlay() {
         if (autoPlayInterval) {
             clearInterval(autoPlayInterval);
         }
     }
-    
+
     // Event listeners for navigation buttons
     if (prevBtn) {
         prevBtn.addEventListener('click', (e) => {
@@ -511,7 +535,7 @@ function initializeSlideshow() {
             startAutoPlay();
         });
     }
-    
+
     if (nextBtn) {
         nextBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -520,7 +544,7 @@ function initializeSlideshow() {
             startAutoPlay();
         });
     }
-    
+
     // Event listeners for dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', (e) => {
@@ -531,11 +555,11 @@ function initializeSlideshow() {
             startAutoPlay();
         });
     });
-    
+
     // Initialize first slide and start auto-play
     showSlide(0);
     startAutoPlay();
-    
+
     // Pause auto-play on hover
     const slideshowContainer = document.querySelector('.services-slideshow');
     if (slideshowContainer) {
@@ -548,25 +572,25 @@ function initializeSlideshow() {
 function initializeWhyChooseSlideshow() {
     const slides = document.querySelectorAll('.why-slide');
     const dots = document.querySelectorAll('.why-dot');
-    
+
     if (slides.length === 0) return;
-    
+
     let currentSlide = 0;
     let autoPlayInterval;
-    
+
     // Show specific slide
     function showSlide(index) {
         // Remove active class from all slides
         slides.forEach(slide => {
             slide.classList.remove('active');
         });
-        
+
         // Update dots
         dots.forEach(dot => {
             dot.classList.remove('bg-blue-900', 'scale-125');
             dot.classList.add('bg-gray-300');
         });
-        
+
         // Show current slide
         slides[index].classList.add('active');
         if (dots[index]) {
@@ -574,19 +598,19 @@ function initializeWhyChooseSlideshow() {
             dots[index].classList.add('bg-blue-900', 'scale-125');
         }
     }
-    
+
     // Next slide
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
-    
+
     // Previous slide
     function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
     }
-    
+
     // Start auto-play (5 seconds)
     function startAutoPlay() {
         if (autoPlayInterval) {
@@ -594,14 +618,14 @@ function initializeWhyChooseSlideshow() {
         }
         autoPlayInterval = setInterval(nextSlide, 5000);
     }
-    
+
     // Stop auto-play
     function stopAutoPlay() {
         if (autoPlayInterval) {
             clearInterval(autoPlayInterval);
         }
     }
-    
+
     // Event listeners for dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', (e) => {
@@ -612,11 +636,11 @@ function initializeWhyChooseSlideshow() {
             startAutoPlay();
         });
     });
-    
+
     // Initialize first slide and start auto-play
     showSlide(0);
     startAutoPlay();
-    
+
     // Pause auto-play on hover
     const slideshowContainer = document.querySelector('.why-choose-slideshow');
     if (slideshowContainer) {
@@ -629,7 +653,7 @@ function initializeWhyChooseSlideshow() {
 function openServiceModal(serviceName) {
     const modal = document.getElementById('serviceModal');
     const serviceInput = document.getElementById('serviceSelected');
-    
+
     if (modal && serviceInput) {
         serviceInput.value = serviceName;
         modal.classList.remove('hidden');
