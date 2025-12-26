@@ -1867,13 +1867,6 @@ const CONFIG = {
       "Dedicated Expert Support",
       "Transparent Pricing",
       "Timely Compliance"
-    ],
-
-    stats: [
-      { number: "1500+", label: "Happy Clients" },
-      { number: "10000+", label: "Returns Filed" },
-      { number: "10+", label: "Years Experience" },
-      { number: "99%", label: "Success Rate" }
     ]
   },
 

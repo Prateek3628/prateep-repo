@@ -130,17 +130,6 @@ function loadHomePage() {
     const heroTagline = document.querySelector('.hero-tagline');
     if (heroTagline) heroTagline.textContent = home.hero.tagline;
 
-    // Load stats
-    const statsContainer = document.querySelector('.stats-container');
-    if (statsContainer) {
-        statsContainer.innerHTML = home.stats.map(stat => `
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-900 mb-2">${stat.number}</div>
-                <div class="text-gray-600">${stat.label}</div>
-            </div>
-        `).join('');
-    }
-
     // Load showcase services overview (display only, no links to service pages)
     const servicesContainer = document.querySelector('.services-grid');
     if (servicesContainer && showcaseServices) {

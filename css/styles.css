@@ -5,6 +5,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Logo Styling */
+header img[alt*="Logo"],
+header img[src*="logo"] {
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    aspect-ratio: 1 / 1;
+    width: 5rem;
+    height: 5rem;
+}
+
 /* Base Animations */
 @keyframes fadeIn {
     from {

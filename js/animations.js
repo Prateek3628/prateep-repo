@@ -80,6 +80,7 @@ function initCounterAnimations() {
 function animateCounter(element) {
     const text = element.textContent;
     const hasPlus = text.includes('+');
+    const hasPercent = text.includes('%');
     const number = parseInt(text.replace(/\D/g, ''));
 
     if (isNaN(number)) return;
@@ -92,10 +93,10 @@ function animateCounter(element) {
     const timer = setInterval(() => {
         current += increment;
         if (current >= number) {
-            element.textContent = number + (hasPlus ? '+' : '');
+            element.textContent = number + (hasPlus ? '+' : '') + (hasPercent ? '%' : '');
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
+            element.textContent = Math.floor(current) + (hasPlus ? '+' : '') + (hasPercent ? '%' : '');
         }
     }, duration / steps);
 }
