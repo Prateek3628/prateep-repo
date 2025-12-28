@@ -11,7 +11,7 @@ header img[src*="logo"] {
     border-radius: 50% !important;
     object-fit: cover !important;
     aspect-ratio: 1 / 1;
-    width: 5rem;
+    width: 14rem;
     height: 5rem;
 }
 
